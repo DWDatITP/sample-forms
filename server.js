@@ -5,7 +5,7 @@ var util = require('util');
 var bodyParser = require('body-parser');
 
 app.use(express.static('public'));
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.get('/form', function(request, response){
   console.log('GET /form');
